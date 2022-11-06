@@ -1,0 +1,14 @@
+.order {
+  padding-top: 90px;
+  padding-bottom: 50px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 47px;
+  }
+
+  &__form {
+    padding: 49px 93px 46px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,61 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "#delivery",
+        text: "Доставка топлива",
+      },
+      {
+        href: "#cards",
+        text: "Топливные карты",
+        icon: true,
+      },
+      {
+        href: "#azs",
+        text: "АЗС",
+        icon: true,
+      },
+      {
+        href: "#price",
+        text: "Цены на топливо",
+      },
+      {
+        href: "#company",
+        text: "О компании",
+        icon: true,
+      },
+      {
+        href: "#contacts",
+        text: "Контакты",
+      },
+    ]
+
+  header.header(class=headerMods)
+    .container
+      if(currentUrl === "index.html")
+        span.header__logo
+          +img("content", "logo", "png", 220, 45, "ЛогоПроцессинг24")
+      else
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +img("content", "logo", "png", 220, 45, "ЛогоПроцессинг24")
+      nav.main-nav.main-nav--top
+        a.main-nav__link.link.main-nav__link--phone(href="tel:+74951234567")
+          +icon("icon-phone", 20, 20)
+          | 8 (495) 127-82-80
+        a.main-nav__link.btn.btn--blue-bg(href="#") Напишите нам
+        a.main-nav__link.btn.btn--blue-bg(href="#")
+          +icon("icon-user", 20, 20)
+          | Личный кабинет
+    nav.main-nav.main-nav--bottom
+      .container
+        ul.main-nav__list
+          each link in headerLinks
+            - const activeState = currentUrl === link.href
+            li.main-nav__item
+
+              if(activeState)
+                span.main-nav__link.link.is-active=link.text
+              else
+                a.main-nav__link.link(href=link.href)=link.text
+                  if(link.icon)
+                    +icon("icon-arrow", 20, 20)

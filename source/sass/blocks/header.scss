@@ -1,0 +1,14 @@
+.header {
+  padding: 8px 0 0;
+
+  background-color: $color-default-white;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    color: $color-default-white;
+  }
+}

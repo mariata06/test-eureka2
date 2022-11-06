@@ -1,0 +1,120 @@
+.footer {
+  &__container--top {
+    background-color: $color-dark-cerullean;
+    padding-top: 78px;
+    padding-bottom: 48px;
+    text-align: center;
+
+    .footer__title,
+    .footer__paragraph {
+      color: $color-default-white;
+      margin: 0;
+    }
+
+    .footer__title {
+      margin-bottom: 30px;
+    }
+
+    .footer__paragraph,
+    .footer__policy {
+      color: $color-default-white;
+      font-size: 14px;
+      line-height: 17px;
+      width: 660px;
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      .link {
+        display: inline-block;
+        color: $color-default-white;
+        border-bottom: 1px solid $color-default-white;
+      }
+    }
+
+    .footer__paragraph {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__container--bottom {
+    background-color: $color-snow;
+    padding-top: 42px;
+    padding-bottom: 50px;
+
+    .container {
+      display: flex;
+    }
+
+    .footer__wrapper {
+      width: 230px;
+      margin-right: 200px;
+    }
+
+    .footer__copyright {
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    .footer__nav {
+      width: 500px;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 13px;
+
+      .link {
+        width: 245px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .footer__nav-link--phone {
+      font-size: 20px;
+      display: flex;
+      flex-direction: column-reverse;
+      width: 170px;
+      align-self: baseline;
+      color: $color-pacific-blue;
+      font-weight: 700;
+      text-align: right;
+      margin-top: 5px;
+      margin-left: auto;
+
+      span {
+        color: $color-default-black;
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__form {
+    width: 1000px;
+    margin: 0 auto;
+    margin-left: 101px;
+
+    .form__input-wrapper {
+      width: 284px;
+      margin-right: 32px;
+
+      label {
+        margin-bottom: 0;
+      }
+    }
+
+    .form__submit {
+      width: 200px;
+    }
+  }
+
+  &__policy {
+    background-color: $color-default-white;
+    padding: 10px 0;
+    font-size: 13px;
+  }
+
+  &__logo {
+    margin-bottom: 14px;
+  }
+}
